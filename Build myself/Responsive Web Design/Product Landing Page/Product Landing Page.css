@@ -1,0 +1,70 @@
+body {
+  text-align: center;
+  background-color: #eee;
+}
+
+header {
+  display: flex;
+}
+
+#header-img {
+  width: 300px;
+}
+
+#nav-bar ul {
+  display: flex;
+  justify-content:flex-end;
+  gap: 20px;
+}
+
+li {
+  list-style: none;
+}
+
+#nav-bar a {
+  text-decoration: none;
+  color: black;
+}
+
+#hero input[type="submit"] {
+  background-color: orange;
+  border: 1px solid orange;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+#features {
+  text-align: left;
+}
+
+#pricing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product {
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.btn {
+  background-color: orange;
+  border: 1px solid orange;
+}
+
+footer {
+  background-color: #ddd;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+footer >ul > li > a {
+  text-decoration: none;
+  color: black;
+}

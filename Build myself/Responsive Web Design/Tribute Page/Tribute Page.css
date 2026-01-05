@@ -1,0 +1,29 @@
+body {
+  text-align: center;
+  background-color: lightgrey;
+}
+
+img {
+  width: 100%;
+}
+
+#img-caption {
+  font-size: 8px;
+}
+
+.history {
+  
+  text-align: start;
+}
+
+.history > h2 {
+  text-align: center;
+}
+
+.history > ul >li {
+  margin: 10px;
+}
+
+.info {
+  font-weight: bold;
+}

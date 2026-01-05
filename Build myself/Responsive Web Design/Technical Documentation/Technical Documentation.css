@@ -1,0 +1,29 @@
+body {
+  display: flex;
+}
+nav {
+  padding: 20px;
+}
+nav ul{
+  list-style: none;
+  padding: 0;
+  
+}
+nav li{
+  display: block;
+  margin-bottom: 10px;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  width: 250px;
+}
+
+@media (max-width: 600px) {
+  #navbar {
+    width: 100%;
+    position: relative;
+  }
+}

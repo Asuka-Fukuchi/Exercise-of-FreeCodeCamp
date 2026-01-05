@@ -1,0 +1,36 @@
+header{
+  background-color: darkred;
+}
+nav {
+    display: flex
+;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+nav ul{
+  list-style: none;
+  display: flex;
+justify-content: flex-end;
+gap: 20px;
+  }
+  nav ul a {
+    color: white;
+    text-decoration: none;
+  }
+
+  #welcome-section{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+  }
+
+@media (max-width: 720px) {
+  body {
+    background-color: lightgray;
+  }
+}
