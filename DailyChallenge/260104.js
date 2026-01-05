@@ -21,3 +21,11 @@ function isLeapYear(year) {
   }
   return year;
 }
+
+console.log(isLeapYear(2024));
+console.log(isLeapYear(2023));
+console.log(isLeapYear(2100));
+console.log(isLeapYear(2000));
+console.log(isLeapYear(1999));
+console.log(isLeapYear(2040));
+console.log(isLeapYear(2026));
