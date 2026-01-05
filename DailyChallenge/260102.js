@@ -19,11 +19,11 @@ function nthFibonacci(n) {
     return b;
 }
 
-function nthFibonacci(n) {
-    if (n <= 1) return 0;
-    if (n === 2) return 1;
-    return nthFibonacci(n - 1) + nthFibonacci(n - 2);
-}
+// function nthFibonacci(n) {
+//     if (n <= 1) return 0;
+//     if (n === 2) return 1;
+//     return nthFibonacci(n - 1) + nthFibonacci(n - 2);
+// }
 
 console.log(nthFibonacci(4));
 console.log(nthFibonacci(10));

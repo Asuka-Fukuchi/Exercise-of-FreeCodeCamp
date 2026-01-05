@@ -35,7 +35,7 @@ function findLeftHandedSeats(table) {
     for (let i = 0; i < upTable.length; i++) {
         if (upTable[i] === "U") {
             const leftIndex = i - 1;
-            if (leftIndex < 0 || upTable[i - 1] !== "R") {
+            if (leftIndex < 0 || upTable[leftIndex] !== "R") {
                 availableSeat++;
             }
         }
