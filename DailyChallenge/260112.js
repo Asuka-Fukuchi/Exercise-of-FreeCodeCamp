@@ -14,8 +14,28 @@
 // Return the number of plants that fit in the field, rounded down to the nearest whole plant.
 
 function getNumberOfPlants(fieldSize, unit, crop) {
+  if(unit === "acres"){
+    fieldSize = fieldSize * 4046.86;
+  } else if (unit === "hectares"){
+    fieldSize =  fieldSize * 10000;
+  } else {
+    return "Please give us the right word";
+  }
 
-  return fieldSize;
+  if(crop === "corn"){
+    return Math.trunc(fieldSize);
+  } else if( crop === "wheat"){
+    return Math.trunc(fieldSize / 0.1);
+  } else if (crop === "soybeans"){
+    return Math.trunc(fieldSize / 0.5);
+  } else if ( crop === "tomatoes"){
+    return Math.trunc(fieldSize / 0.25);
+  } else if( crop === "lettuce"){
+    return Math.trunc(fieldSize / 0.2);
+  } else{
+    return "Please give us the right word";
+  }
+
 }
 
 console.log(getNumberOfPlants(1, "acres", "corn"));
