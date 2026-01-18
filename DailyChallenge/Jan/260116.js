@@ -4,7 +4,9 @@
 // The length of the hypotenuse is calculated by adding the squares of the two leg lengths together and then taking the square root of that total (a2 + b2 = c2).
 
 function isIntegerHypotenuse(a, b) {
+    // Math.sqrt: 平方根を求める
     const c = Math.sqrt(a * a + b * b);
+    //　Number.isInteger:　整数かどうかの判定
     return Number.isInteger(c);
 }
 
