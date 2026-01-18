@@ -44,3 +44,24 @@ console.log(getsFreeShipping(["jeans", "shirt", "jacket"], 75));
 console.log(getsFreeShipping(["socks", "socks", "hat"], 75));
 console.log(getsFreeShipping(["shirt", "shirt", "jeans", "socks"], 100));
 console.log(getsFreeShipping(["hat", "socks", "hat", "jeans", "shoes", "hat"], 200));
+
+
+// スマートな解き方
+// function getsFreeShipping(cart, minimum) {
+//   const prices = {
+//     shirt: 34.25,
+//     jeans: 48.50,
+//     shoes: 75.00,
+//     hat: 19.95,
+//     socks: 15.00,
+//     jacket: 109.95,
+//   };
+
+//   let total = 0;
+
+//   for (let i = 0; i < cart.length; i++) {
+//     total += prices[cart[i]] ?? 0;
+//   }
+
+//   return total >= minimum;
+// }
