@@ -17,6 +17,7 @@
 
 function knightMoves(position) {
     const split = position.split("");
+    // charCodeAt：文字列を数値に変換する方法
     let x = split[0].charCodeAt(0) - "A".charCodeAt(0) + 1;
     let y = Number(split[1]);
 
