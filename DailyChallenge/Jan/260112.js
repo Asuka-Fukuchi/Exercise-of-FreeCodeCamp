@@ -23,6 +23,7 @@ function getNumberOfPlants(fieldSize, unit, crop) {
   }
 
   if(crop === "corn"){
+    // Math.trunc: 小数点以下を削除
     return Math.trunc(fieldSize);
   } else if( crop === "wheat"){
     return Math.trunc(fieldSize / 0.1);
