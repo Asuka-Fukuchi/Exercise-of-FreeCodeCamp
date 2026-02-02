@@ -17,7 +17,33 @@
 // Zodiac signs are based only on the month and day, you can ignore the year.
 
 function getSign(dateStr) {
+    const [, month, day] = dateStr.split("-").map(Number);
+    const md = month * 100 + day;
 
+    const signs = [
+        { start: 120, name: "Aquarius" },
+        { start: 219, name: "Pisces" },
+        { start: 321, name: "Aries" },
+        { start: 420, name: "Taurus" },
+        { start: 521, name: "Gemini" },
+        { start: 621, name: "Cancer" },
+        { start: 723, name: "Leo" },
+        { start: 823, name: "Virgo" },
+        { start: 923, name: "Libra" },
+        { start: 1023, name: "Scorpio" },
+        { start: 1122, name: "Sagittarius" },
+        { start: 1222, name: "Capricorn" }
+    ];
+
+    let result = "Capricorn";
+
+    for (const s of signs) {
+        if (md >= s.start) {
+            result = s.name;
+        }
+    }
+
+    return result;
 }
 
 console.log(getSign("2026-01-31"));
