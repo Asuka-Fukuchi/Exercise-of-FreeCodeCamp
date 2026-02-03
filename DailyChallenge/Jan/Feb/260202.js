@@ -1,4 +1,4 @@
-// Groundhog Day
+// Groundhog Day ★☆☆〜★★☆
 // Today is Groundhog Day, in which a groundhog predicts the weather based on whether or not it sees its shadow.
 
 // Given a value representing the groundhog's appearance, return the correct prediction:

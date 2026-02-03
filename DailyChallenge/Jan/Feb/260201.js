@@ -1,4 +1,4 @@
-// Digital Detox
+// Digital Detox ★★★
 // Given an array of your login logs, determine whether you have met your digital detox goal.
 
 // Each log is a string in the format "YYYY-MM-DD HH:mm:ss".
@@ -8,6 +8,7 @@
 // You logged in no more than once within any four-hour period.
 // You logged in no more than 2 times on any single day.
 
+// This answer was created by AI
 function digitalDetox(logs) {
   const entries = logs.map(log => ({
     day: log.slice(0, 10),
