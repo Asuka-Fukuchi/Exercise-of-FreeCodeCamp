@@ -18,6 +18,7 @@
 
 function getSign(dateStr) {
     const [, month, day] = dateStr.split("-").map(Number);
+    // 3月21日 → 321
     const md = month * 100 + day;
 
     const signs = [
