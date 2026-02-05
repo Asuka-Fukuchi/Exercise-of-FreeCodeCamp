@@ -7,3 +7,10 @@ true / false と truthy / falsy
 ## 2/3 ★☆☆
 文字列反転
 split("").reverse().join("")
+
+## 2/4 ★☆☆
+function truncateText(text) {
+    return text.length <= 20
+        ? text
+        : text.slice(0, 17) + "...";
+}
