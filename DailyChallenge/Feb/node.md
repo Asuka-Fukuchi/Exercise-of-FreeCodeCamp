@@ -14,3 +14,10 @@ function truncateText(text) {
         ? text
         : text.slice(0, 17) + "...";
 }
+
+## 2/5 ★☆☆〜★★☆
+for (const coin of change) {
+    total += coin;
+}
+
+const total = change.reduce((sum, coin) => sum + coin, 0);
