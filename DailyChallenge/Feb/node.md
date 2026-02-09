@@ -22,6 +22,15 @@ for (const coin of change) {
 
 const total = change.reduce((sum, coin) => sum + coin, 0);
 
+## 2/6 ★☆☆
+別解
+function getFlag(code) {
+    return [...code.toUpperCase()]
+        .map(char => 127397 + char.charCodeAt())
+        .map(codePoint => String.fromCodePoint(codePoint))
+        .join("");
+}
+
 ## 2/7 ★★☆
 別解
 function getLandingStance(startStance, rotation) {
