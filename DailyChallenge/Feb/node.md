@@ -22,6 +22,24 @@ for (const coin of change) {
 
 const total = change.reduce((sum, coin) => sum + coin, 0);
 
+## 2/7 ★★☆
+別解
+function getLandingStance(startStance, rotation) {
+    const normalized = Math.abs(rotation) % 360;
+
+    if (normalized === 180) {
+        return startStance === "Regular" ? "Goofy" : "Regular";
+    }
+
+    return startStance;
+}
+
+Math.abs()（絶対値）
+Math.abs(5)    // 5
+Math.abs(-5)   // 5
+Math.abs(180)  // 180
+Math.abs(-180) // 180
+
 ## 2/8 ★☆☆
 余計な条件分岐を書いてしまった。
 function calculatePenaltyDistance(rounds) {

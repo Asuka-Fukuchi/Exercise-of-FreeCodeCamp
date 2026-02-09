@@ -1,103 +1,27 @@
-// 2026 Winter Games Day 1: Opening Day
-// Today marks the start of the 2026 Winter Games. The next 17 days will bring you coding challenges inspired by them.
+// 2026 Winter Games Day 2: Snowboarding
+// Given a snowboarder's starting stance and a rotation in degrees, determine their landing stance.
 
-// For the first one, you are given a two-letter country code and need to return the flag emoji for that country.
+// A snowboarder's stance is either "Regular" or "Goofy".
+// Trick rotations are multiples of 90 degrees. Positive indicates clockwise rotation, and negative indicate counter-clockwise rotation.
+// The landing stance flips every 180 degrees of rotation.
+// For example, given "Regular" and 90, return "Regular". Given "Regular" and 180 degrees, return "Goofy".
 
-// Use this list:
-
-// Country	Code	Flag
-// Albania	"AL"	"🇦🇱"
-// Andorra	"AD"	"🇦🇩"
-// Argentina	"AR"	"🇦🇷"
-// Armenia	"AM"	"🇦🇲"
-// Australia	"AU"	"🇦🇺"
-// Austria	"AT"	"🇦🇹"
-// Azerbaijan	"AZ"	"🇦🇿"
-// Belgium	"BE"	"🇧🇪"
-// Benin	"BJ"	"🇧🇯"
-// Bolivia	"BO"	"🇧🇴"
-// Bosnia and Herzegovina	"BA"	"🇧🇦"
-// Brazil	"BR"	"🇧🇷"
-// Bulgaria	"BG"	"🇧🇬"
-// Canada	"CA"	"🇨🇦"
-// Chile	"CL"	"🇨🇱"
-// China	"CN"	"🇨🇳"
-// Colombia	"CO"	"🇨🇴"
-// Croatia	"HR"	"🇭🇷"
-// Cyprus	"CY"	"🇨🇾"
-// Czech Republic	"CZ"	"🇨🇿"
-// Denmark	"DK"	"🇩🇰"
-// Ecuador	"EC"	"🇪🇨"
-// Eritrea	"ER"	"🇪🇷"
-// Estonia	"EE"	"🇪🇪"
-// Finland	"FI"	"🇫🇮"
-// France	"FR"	"🇫🇷"
-// Georgia	"GE"	"🇬🇪"
-// Germany	"DE"	"🇩🇪"
-// Great Britain	"GB"	"🇬🇧"
-// Greece	"GR"	"🇬🇷"
-// Guinea-Bissau	"GW"	"🇬🇼"
-// Haiti	"HT"	"🇭🇹"
-// Hong Kong	"HK"	"🇭🇰"
-// Hungary	"HU"	"🇭🇺"
-// Iceland	"IS"	"🇮🇸"
-// India	"IN"	"🇮🇳"
-// Iran	"IR"	"🇮🇷"
-// Ireland	"IE"	"🇮🇪"
-// Israel	"IL"	"🇮🇱"
-// Italy	"IT"	"🇮🇹"
-// Jamaica	"JM"	"🇯🇲"
-// Japan	"JP"	"🇯🇵"
-// Kazakhstan	"KZ"	"🇰🇿"
-// Kenya	"KE"	"🇰🇪"
-// Kosovo	"XK"	"🇽🇰"
-// Kyrgyzstan	"KG"	"🇰🇬"
-// Latvia	"LV"	"🇱🇻"
-// Lebanon	"LB"	"🇱🇧"
-// Liechtenstein	"LI"	"🇱🇮"
-// Lithuania	"LT"	"🇱🇹"
-// Luxembourg	"LU"	"🇱🇺"
-// Madagascar	"MG"	"🇲🇬"
-// Malaysia	"MY"	"🇲🇾"
-// Malta	"MT"	"🇲🇹"
-// Mexico	"MX"	"🇲🇽"
-// Moldova	"MD"	"🇲🇩"
-// Monaco	"MC"	"🇲🇨"
-// Mongolia	"MN"	"🇲🇳"
-// Montenegro	"ME"	"🇲🇪"
-// Morocco	"MA"	"🇲🇦"
-// Netherlands	"NL"	"🇳🇱"
-// New Zealand	"NZ"	"🇳🇿"
-// Nigeria	"NG"	"🇳🇬"
-// North Macedonia	"MK"	"🇲🇰"
-// Norway	"NO"	"🇳🇴"
-// Pakistan	"PK"	"🇵🇰"
-// Philippines	"PH"	"🇵🇭"
-// Poland	"PL"	"🇵🇱"
-// Portugal	"PT"	"🇵🇹"
-// Puerto Rico	"PR"	"🇵🇷"
-// Romania	"RO"	"🇷🇴"
-// San Marino	"SM"	"🇸🇲"
-// Saudi Arabia	"SA"	"🇸🇦"
-// Serbia	"RS"	"🇷🇸"
-// Singapore	"SG"	"🇸🇬"
-// Slovakia	"SK"	"🇸🇰"
-// Slovenia	"SI"	"🇸🇮"
-// South Africa	"ZA"	"🇿🇦"
-// South Korea	"KR"	"🇰🇷"
-// Spain	"ES"	"🇪🇸"
-// Sweden	"SE"	"🇸🇪"
-// Switzerland	"CH"	"🇨🇭"
-// Thailand	"TH"	"🇹🇭"
-// Trinidad & Tobago	"TT"	"🇹🇹"
-// Turkey	"TR"	"🇹🇷"
-// Ukraine	"UA"	"🇺🇦"
-// United Arab Emirates	"AE"	"🇦🇪"
-// United States	"US"	"🇺🇸"
-// Uruguay	"UY"	"🇺🇾"
-// Uzbekistan	"UZ"	"🇺🇿"
-// Venezuela	"VE"	"🇻🇪"
-
-function getFlag(code) {
-    
+function getLandingStance(startStance, rotation) {
+    const flip = Math.trunc(rotation / 180);
+    if(flip % 2 === 0){
+        return startStance;
+    } else {
+        if(startStance === "Regular"){
+            return "Goofy"
+        } else {
+            return "Regular"
+        }
+    }
 }
+
+console.log(getLandingStance("Regular", 90));
+console.log(getLandingStance("Regular", 180));
+console.log(getLandingStance("Goofy", -270));
+console.log(getLandingStance("Regular", 2340));
+console.log(getLandingStance("Goofy", 2160));
+console.log(getLandingStance("Goofy", -540));
