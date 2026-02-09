@@ -21,3 +21,18 @@ for (const coin of change) {
 }
 
 const total = change.reduce((sum, coin) => sum + coin, 0);
+
+## 2/9 ★★☆
+メダル判定。自力で解いた。
+ソートしたけどソート不要。
+    for (const score of competitor) {
+        if (score > myScore) {
+            higherCount++;
+        }
+    }
+
+もっと簡単な解き方
+const allScores = [...competitor, myScore];
+allScores.sort((a, b) => b - a);
+
+const rank = allScores.indexOf(myScore);
