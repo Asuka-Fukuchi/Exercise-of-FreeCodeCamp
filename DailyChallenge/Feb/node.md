@@ -22,6 +22,27 @@ for (const coin of change) {
 
 const total = change.reduce((sum, coin) => sum + coin, 0);
 
+## 2/8 ★☆☆
+余計な条件分岐を書いてしまった。
+function calculatePenaltyDistance(rounds) {
+  let miss = 0;
+
+  for (const hits of rounds) {
+    miss += 5 - hits;
+  }
+
+  return miss * 150;
+}
+
+別解
+function calculatePenaltyDistance(rounds) {
+  const totalMiss = rounds.reduce((sum, hits) => {
+    return sum + (5 - hits);
+  }, 0);
+
+  return totalMiss * 150;
+}
+
 ## 2/9 ★★☆
 メダル判定。自力で解いた。
 ソートしたけどソート不要。

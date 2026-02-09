@@ -5,6 +5,17 @@
 // Each missed target results in a 150 meter penalty loop.
 
 function calculatePenaltyDistance(rounds) {
-
-  return rounds;
+  let miss = 0;
+  for(let i = 0; i < rounds.length; i++){
+    if(rounds[i] !== 5){
+      miss += 5 - rounds[i];
+    }
+  }
+  return miss * 150;
 }
+
+console.log(calculatePenaltyDistance([4, 4]));
+console.log(calculatePenaltyDistance([5, 5]));
+console.log(calculatePenaltyDistance([4, 5, 3, 5]));
+console.log(calculatePenaltyDistance([5, 4, 5, 5]));
+console.log(calculatePenaltyDistance([4, 3, 0, 3]));
