@@ -84,3 +84,25 @@ const allScores = [...competitor, myScore];
 allScores.sort((a, b) => b - a);
 
 const rank = allScores.indexOf(myScore);
+
+## 2/10 ★★☆ 
+大枠は自分で解いたけど、分の値を小数点を許さない処理と秒が1桁の時0で埋める処理をAIに補足してもらった。
+
+function getRelativeResults(results) {
+    const toSeconds = t => {
+        const [h, m, s] = t.split(":").map(Number);
+        return h * 3600 + m * 60 + s;
+    };
+
+    const fastest = toSeconds(results[0]);
+
+    return results.map((time, i) => {
+        if (i === 0) return "0";
+
+        const diff = toSeconds(time) - fastest;
+        const minutes = Math.floor(diff / 60);
+        const seconds = diff % 60;
+
+        return `+${minutes}:${String(seconds).padStart(2, "0")}`;
+    });
+}
