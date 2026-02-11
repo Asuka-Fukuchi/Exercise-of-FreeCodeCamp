@@ -106,3 +106,21 @@ function getRelativeResults(results) {
         return `+${minutes}:${String(seconds).padStart(2, "0")}`;
     });
 }
+
+## 2/11 ★★☆
+元の配列を壊さなようにする
+×　const sort = judgeScores.sort((a, b) => b - a);
+〇　const sorted = [...judgeScores].sort((a, b) => b - a);
+
+別解
+function computeScore(judgeScores, ...penalties) {
+    const sorted = [...judgeScores].sort((a, b) => a - b);
+    
+    const base = sorted
+        .slice(1, -1)
+        .reduce((sum, score) => sum + score, 0);
+
+    const penaltyTotal = penalties.reduce((sum, p) => sum + p, 0);
+
+    return base - penaltyTotal;
+}
